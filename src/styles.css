@@ -1,0 +1,49 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * LexTrack — Soomro Law Services Design System v2
+ * Brand: "Modern Tech / Minimal Legal" — dark teal + charcoal radial system.
+ * Palette: hsla(182,89%,17%) → hsla(0,0%,17%) radial gradient.
+ */
+
+@theme inline {
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-background: oklch(0.985 0.002 247);
+  --color-foreground: oklch(0.18 0.02 250);
+  --color-card: oklch(1 0 0);
+  --color-card-foreground: oklch(0.18 0.02 250);
+  --color-popover: oklch(1 0 0);
+  --color-popover-foreground: oklch(0.18 0.02 250);
+  --color-primary: oklch(0.32 0.08 195);
+  --color-primary-foreground: oklch(0.98 0.01 195);
+  --color-secondary: oklch(0.95 0.01 250);
+  --color-secondary-foreground: oklch(0.25 0.02 250);
+  --color-muted: oklch(0.95 0.01 250);
+  --color-muted-foreground: oklch(0.5 0.02 250);
+  --color-accent: oklch(0.94 0.02 195);
+  --color-accent-foreground: oklch(0.25 0.04 195);
+  --color-destructive: oklch(0.55 0.2 25);
+  --color-destructive-foreground: oklch(0.98 0.01 25);
+  --color-border: oklch(0.9 0.01 250);
+  --color-input: oklch(0.9 0.01 250);
+  --color-ring: oklch(0.4 0.08 195);
+  --radius: 0.5rem;
+
+  --gradient-brand: radial-gradient(circle at 30% 30%, hsla(182, 89%, 17%, 1) 0%, hsla(0, 0%, 17%, 1) 100%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
