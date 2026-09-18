@@ -1,0 +1,7 @@
+[install]
+# Use the exact versions specified in package.json
+exact = true
+
+[run]
+# Enable Bun's fast package manager
+bun = true
